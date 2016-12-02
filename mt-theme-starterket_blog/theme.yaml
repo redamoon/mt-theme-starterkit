@@ -1,0 +1,18 @@
+---
+author_link: https://github.com/redamoon/mt-theme-component
+author_name: redamoon
+class: blog
+description: 案件用にフォーマットしたテーマ【ブログ用】
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
+elements:
+  blog_static_files:
+    component: ~
+    data:
+      - images
+    importer: blog_static_files
+id: mt-theme-starterket
+label: mt-theme-starterket-Blog
+name: mt-theme-starterket-blog
+version: '1.0'

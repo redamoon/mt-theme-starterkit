@@ -1,0 +1,25 @@
+<mt:ignore>
+========================================
+Template Name : テンプレートのラベル名を入力
+Template Type : テンプレートタイプを入力
+Template Note : テンプレートの用途
+========================================
+</mt:ignore>
+<$mt:Include module="config" parent="1"$>
+<mt:ignore>** ローカル変数 **</mt:ignore>
+<mt:SetVars>
+
+</mt:SetVars>
+
+<mt:ignore>** 表示部分 **</mt:ignore>
+<mt:Unless name="compress" regex_replace="/^\s*\n/gm","">
+<$mt:Include module="function" parent="1"$>
+<$mt:Include module="html_head" parent="1"$>
+<$mt:Include module="header" parent="1"$>
+<$mt:Include module="navigation" parent="1"$>
+
+<!-- ここからコンテンツ -->
+
+<$mt:Include module="footer" parent="1"$>
+<$mt:Include module="html_foot" parent="1"$>
+</mt:Unless>

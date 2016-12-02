@@ -1,0 +1,76 @@
+---
+author_link: https://github.com/redamoon/mt-theme-starterket
+author_name: redamoon
+class: website
+description: 案件用にフォーマットしたテーマ【ウェブサイト用】
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thumb-small.png'
+elements:
+  blog_static_files:
+    component: ~
+    data:
+      - images
+    importer: blog_static_files
+  template_set:
+    component: ~
+    data:
+      base_path: templates
+      label: 'exported_template set'
+      templates:
+        index:
+          main_index:
+            label: 'index.html'
+            outfile: index.html
+            rebuild_me: '1'
+          _format_template:
+            label: '_format_template.html'
+            outfile: _format_template.html
+            rebuild_me: '1'
+            build_type: '0'
+        module:
+          template_config:
+            label: 'config'
+          template_function:
+            label: 'function'
+          template_html_head:
+            label: 'html_head'
+          template_html_foot:
+            label: 'html_foot'
+          template_script:
+            label: 'script'
+          template_footer:
+            label: 'footer'
+          template_navigation:
+            label: 'navigation'
+          template_header:
+            label: 'header'
+        system:
+          dynamic_error:
+            description_label: 'Displays errors for dynamically-published templates.'
+            label: 'Dynamic Error'
+          popup_image:
+            description_label: 'Displays image when user clicks a popup-linked image.'
+            label: 'Popup Image'
+          search_results:
+            description_label: 'Displays results of a search.'
+            label: 'Search Results'
+          comment_preview:
+            description_label: 'Displays preview of comment.'
+            label: 'Comment Preview'
+          comment_response:
+            description_label: 'Displays error, pending or confirmation message for comments.'
+            label: 'Comment Response'
+        page:
+          template_page:
+            label: page
+            mappings:
+              page:
+                archive_type: Page
+                file_template: '%-c/%-f'
+                preferred: '1'
+    importer: template_set
+id: mt-theme-starterket
+label: mt-theme-starterket-WebSite
+name: mt-theme-starterket-website
+version: '1.0'
