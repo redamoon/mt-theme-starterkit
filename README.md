@@ -5,7 +5,7 @@
 
 構築に必要なものだけに特化したテーマ[Visual themeテーマよりStarterket theme]になります。
 
-component_websiteとcomponent_blogを[MT_HOME/themes/]へアップロードしてお使いください。
+mt-theme-starterket_websiteとmt-theme-starterket_blogを[MT_HOME/themes/]へアップロードしてお使いください。
 
 ## [Theme] mt-theme-starterket_website
 
