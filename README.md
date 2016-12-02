@@ -7,7 +7,7 @@
 
 component_websiteとcomponent_blogを[MT_HOME/themes/]へアップロードしてお使いください。
 
-## [Theme] component_website
+## [Theme] mt-theme-starterket_website
 
 ウェブサイトで使用するテーマになります。
 Webで考えられる基本のモジュールを格納されています。
@@ -18,13 +18,17 @@ Webで考えられる基本のモジュールを格納されています。
 
 #### インデックステンプレート
 
-* index
+* index.html
 
 トップページで使用するインデックステンプレートになります。
 
+* _format_template.html
+
+新規テンプレート作成用のフォーマットファイル
+
 #### アーカイブテンプレート
 
-* page
+* ウェブページ
 
 ウェブページで使用するアーカイブテンプレートになります。
 
@@ -41,7 +45,7 @@ Webで考えられる基本のモジュールを格納されています。
 * navigation：表示側のnavigationテンプレート
 * script：scriptを記述したテンプレート（local_scriptはページ固有で使用するためのmt:Var）
 
-## [Theme] component_blog
+## [Theme] mt-theme-starterket_blog
 
 すべてを空にしたテーマになります。
 ブログで必要なテンプレートは、案件によって変わるため空にして、0ベースで構築することが可能です。
@@ -156,4 +160,3 @@ sp_header
 * CMS化するブログのカスタムフィールドを作成
 * ブログの作成
 * 動作チェック（記事の投稿・出力結果の確認）
-
