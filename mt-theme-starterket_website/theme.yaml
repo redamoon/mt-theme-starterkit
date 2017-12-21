@@ -5,7 +5,7 @@ class: website
 description: 案件用にフォーマットしたテーマ【ウェブサイト用】
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
-thumbnail_file_small: 'thumb-small.png'
+thumbnail_file_small: 'thucmb-small.png'
 elements:
   blog_static_files:
     component: ~
@@ -63,7 +63,7 @@ elements:
             label: 'Comment Response'
         page:
           template_page:
-            label: page
+            label: pages
             mappings:
               page:
                 archive_type: Page
@@ -73,4 +73,4 @@ elements:
 id: mt-theme-starterket
 label: mt-theme-starterket-WebSite
 name: mt-theme-starterket-website
-version: '1.0'
+version: '1.1'
