@@ -37,7 +37,7 @@ Webで考えられる基本のモジュールを格納されています。
 #### モジュールテンプレート
 
 * config：すべての設定・blogID・変数を記述したテンプレート
-* function：SetVarTemplate、SetVarBlockを記述したテンプレート
+* component：SetVarTemplate、SetVarBlockを記述したテンプレート
 * html_head：htmlのhead情報テンプレート
 * html_foot：htmlのfoot情報テンプレート（scriptのインクルード等）
 * header：表示側のheaderテンプレート
@@ -53,7 +53,7 @@ Webで考えられる基本のモジュールを格納されています。
 必要なモジュールをウェブサイトからインクルードで持ってくるようにしていきます。
 
 ```
-<$mt:Include module="モジュール名" parent="1"$>
+<mt:Include module="モジュール名" parent="1" />
 ```
 
 ## Format
@@ -90,9 +90,9 @@ Template Note : テンプレートに対してのコメント
 
 ## Tips
 
-### functionの使い方
+### componentの使い方
 
-functionは汎用的なもの（ボタンや見出し等）をSetVarTemplateやSetVarBlockを用いてテンプレート化して自由に出力先でmt:Varできるような形を想定したテンプレートになります。
+componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateやSetVarBlockを用いてテンプレート化して自由に出力先でmt:Varできるような形を想定したテンプレートになります。
 
 #### 例：ボタン
 

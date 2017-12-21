@@ -31,8 +31,8 @@ elements:
         module:
           template_config:
             label: 'config'
-          template_function:
-            label: 'function'
+          template_component:
+            label: 'component'
           template_html_head:
             label: 'html_head'
           template_html_foot:
