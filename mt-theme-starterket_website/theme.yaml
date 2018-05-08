@@ -45,25 +45,9 @@ elements:
             label: 'navigation'
           template_header:
             label: 'header'
-        system:
-          dynamic_error:
-            description_label: 'Displays errors for dynamically-published templates.'
-            label: 'Dynamic Error'
-          popup_image:
-            description_label: 'Displays image when user clicks a popup-linked image.'
-            label: 'Popup Image'
-          search_results:
-            description_label: 'Displays results of a search.'
-            label: 'Search Results'
-          comment_preview:
-            description_label: 'Displays preview of comment.'
-            label: 'Comment Preview'
-          comment_response:
-            description_label: 'Displays error, pending or confirmation message for comments.'
-            label: 'Comment Response'
         page:
           template_page:
-            label: page
+            label: pages
             mappings:
               page:
                 archive_type: Page

@@ -53,7 +53,7 @@ Webで考えられる基本のモジュールを格納されています。
 必要なモジュールをウェブサイトからインクルードで持ってくるようにしていきます。
 
 ```
-<$mt:Include module="モジュール名" parent="1"$>
+<mt:Include module="モジュール名" parent="1" />
 ```
 
 ## Format
@@ -61,22 +61,22 @@ Webで考えられる基本のモジュールを格納されています。
 追加テンプレート用のフォーマットになります。
 
 ```
-<mt:ignore>
+<mt:Ignore>
 ========================================
 Template Name : テンプレートの名前
 Template Type : 用途（Layout・Module・Script・Web Page・Entries・Entry・Category） / （WebSite or Blog）
 Template Note : テンプレートに対してのコメント
 ========================================
-</mt:ignore>
+</mt:Ignore>
 <mt:Include module="config" parent="1" />
-<mt:ignore>** ローカル変数 **</mt:ignore>
-<mt:ignore>
+<mt:Ignore>** ローカル変数 **</mt:Ignore>
+<mt:Ignore>
 <mt:SetVars>
 // そのテンプレート固有で使いたい変数を格納してください。
 </mt:SetVars>
-</mt:ignore>
+</mt:Ignore>
 
-<mt:ignore>** 表示部分 **</mt:ignore>
+<mt:Ignore>** 表示部分 **</mt:Ignore>
 <mt:Unless name="compress" regex_replace="/^\s*\n/gm","">
 
 // コンテンツを入れてください。
@@ -109,7 +109,7 @@ functionは汎用的なもの（ボタンや見出し等）をSetVarTemplateやS
 ##### MTML
 
 ```
-<mt:ignore>** Button Component：Set **</mt:ignore>
+<mt:Ignore>** Button Component：Set **</mt:Ignore>
 <mt:SetVarTemplate name="_base_button" key="button" note="ボタン">
 <a class="<mt:Var name="_button_class" />" href="<mt:Var name="_button_link" />">
   <mt:Var name="_button_name" />
@@ -118,7 +118,7 @@ functionは汎用的なもの（ボタンや見出し等）をSetVarTemplateやS
 ```
 
 ```
-<mt:ignore>** Button Component：Build **</mt:ignore>
+<mt:Ignore>** Button Component：Build **</mt:Ignore>
 <mt:Var name="_base_button" key="button" _button_class="button" _button_link="/path/" _button_name="ベースボタン" note="_base_buttonを実行" />
 ```
 
