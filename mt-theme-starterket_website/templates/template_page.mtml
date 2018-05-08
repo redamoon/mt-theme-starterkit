@@ -1,18 +1,18 @@
-<mt:ignore>
+<mt:Ignore>
 ========================================
 Template Name : page
 Template Type : Web Page Template
 Template Note : ウェブページ出力用
 ========================================
-</mt:ignore>
+</mt:Ignore>
 <mt:Include module="config" parent="1" />
-<mt:Include module="component" parent="1" />
-<mt:ignore>** ローカル変数 **</mt:ignore>
+<mt:Include module="function" parent="1" />
+<mt:Ignore>** ローカル変数 **</mt:Ignore>
 <mt:SetVars>
 
 </mt:SetVars>
 
-<mt:ignore>** 表示部分 **</mt:ignore>
+<mt:Ignore>** 表示部分 **</mt:Ignore>
 <mt:Unless name="compress" regex_replace="/^\s*\n/gm","">
 <mt:Include module="html_head" parent="1" />
 <mt:Include module="header" parent="1" />
