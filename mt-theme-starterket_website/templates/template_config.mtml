@@ -6,7 +6,7 @@ Template Note : 各種設定
 ========================================
 </mt:Ignore>
 
-<mt:SetVarBlock name="compress_pattern">/http:\/\/<mt:WebsiteHost />/g</mt:SetVarBlock>
+<mt:SetVarBlock name="compress_pattern">/(http|https):\/\/<mt:WebsiteHost />/g</mt:SetVarBlock>
 <mt:SetVarBlock name="compress_authorname">/^(\d{1,})_/</mt:SetVarBlock>
 <mt:SetVarBlock name="compress_replacement"></mt:SetVarBlock>
 <mt:SetVars>
