@@ -13,59 +13,76 @@ elements:
       FolderGroup:
         categories:
           ":order":
-          - company
-          company:
-            description: '会社概要のフォルダ'
-            label: '会社概要'
-        name: 'フォルダグループ'
+          - folderA
+          - folderB
+          - folderC
+          folderA:
+            description: 'FolderAのフォルダ'
+            label: 'FolderA'
+          folderB:
+            description: 'FolderBのフォルダ'
+            label: 'FolderB'
+          folderC:
+            description: 'FolderCのフォルダ'
+            label: 'FolderC'
+        name: 'FolderGroup'
       CategoryGroup:
         categories:
           ":order":
-          - info
-          - event
-          - blog
-          info:
-            description: 'お知らせのカテゴリ'
-            label: 'お知らせ'
-          blog:
-            description: 'ブログのカテゴリ'
-            label: 'ブログ'
-          event:
-            description: 'イベントのカテゴリ'
-            label: 'イベント'
-        name: 'カテゴリグループ'
+          - CategoryA
+          - CategoryB
+          - CategoryC
+          CategoryA:
+            description: 'CategoryAのカテゴリ'
+            label: 'CategoryA'
+          CategoryB:
+            description: 'CategoryBのカテゴリ'
+            label: 'CategoryB'
+          CategoryC:
+            description: 'CategoryCのカテゴリ'
+            label: 'CategoryC'
+        name: 'CategoryGroup'
     importer: default_category_sets
   default_content_types:
     component: ~
     data:
-    -
-      description: '固定ページのコンテンツタイプ'
-      fields:
       -
-        data_label: 1
-        description: ''
-        display: force
-        initial_value: ''
-        label: 'ページタイトル'
-        max_length: 255
-        min_length: 0
-        order: 1
-        required: 1
-        type: single_line_text
-      -
-        can_add: 0
-        category_set: 'フォルダグループ'
-        description: ''
-        display: force
-        label: 'フォルダ'
-        max: 1
-        min: 1
-        multiple: 0
-        order: 2
-        required: 1
-        type: categories
-      name: '固定ページ'
-      user_disp_option: 1
+        description: '固定ページのコンテンツタイプ'
+        fields:
+          -
+            data_label: 1
+            description: ''
+            display: force
+            initial_value: ''
+            label: 'ページタイトル'
+            max_length: 255
+            min_length: 0
+            order: 1
+            required: 1
+            type: single_line_text
+          -
+            can_add: 0
+            category_set: 'FolderGroup'
+            description: ''
+            display: force
+            label: 'フォルダ'
+            max: 1
+            min: 1
+            multiple: 0
+            order: 2
+            required: 1
+            type: categories
+          -
+            description: ''
+            display: force
+            initial_value: ''
+            input_format: 0
+            label: 'ページ本文'
+            order: 3
+            required: 1
+            type: multi_line_text
+        name: '固定ページ'
+        user_disp_option: 1
     importer: default_content_types
   template_set:
     component: ~
@@ -80,7 +97,7 @@ elements:
             mappings:
               contenttype:
                 archive_type: ContentType
-                category_field: フォルダ
+                category_field: 'フォルダ'
                 file_template: <mt:CategoryBasename separator="-" />/<mt:ContentID pad="1">.html
                 preferred: 1
         index:
