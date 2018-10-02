@@ -8,9 +8,11 @@ Template Note : Html_Foot Template
 
 <mt:Ignore>** 表示部分 **</mt:Ignore>
 <mt:Include module="script" parent="1" />
-
+<mt:Ignore>
+  - Debug Mode : true のときに使用
+</mt:Ignore>
 <mt:If name="debug" eq="true">
-<mt:Include module="_test" parent="1" />
+<mt:Include module="debug" parent="1" />
 </mt:If>
 </body>
 </html>
