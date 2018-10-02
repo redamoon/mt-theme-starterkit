@@ -70,15 +70,17 @@ elements:
   template_set:
     component: ~
     data:
+      base_path: templates
+      label: 'exported_template set'
       templates:
         ct:
-          template_entry:
+          template_pages:
             content_type: '固定ページ'
-            label: pages.html
+            label: 'pages.html'
             mappings:
               contenttype:
                 archive_type: ContentType
-                category_field: カテゴリ
+                category_field: フォルダ
                 file_template: <mt:CategoryBasename separator="-" />/<mt:ContentID pad="1">.html
                 preferred: 1
         index:
