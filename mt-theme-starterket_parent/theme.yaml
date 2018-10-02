@@ -71,6 +71,16 @@ elements:
     component: ~
     data:
       templates:
+        ct:
+          template_entry:
+            content_type: '固定ページ'
+            label: pages.html
+            mappings:
+              contenttype:
+                archive_type: ContentType
+                category_field: カテゴリ
+                file_template: <mt:CategoryBasename separator="-" />/<mt:ContentID pad="1">.html
+                preferred: 1
         index:
           main_index:
             label: 'index.html'
@@ -92,12 +102,16 @@ elements:
             label: 'html_foot'
           template_script:
             label: 'script'
+          template_style:
+            label: 'style'
           template_footer:
             label: 'footer'
           template_navigation:
             label: 'navigation'
           template_header:
             label: 'header'
+          template_debug:
+            label: 'debug'
     importer: template_set
 id: mt-theme-starterket
 label: mt-theme-starterket-Parent

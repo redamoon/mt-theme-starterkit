@@ -1,10 +1,10 @@
-<mt:ignore>
+<mt:Ignore>
 ========================================
 Template Name : config
-Template Type : Module / WebSite
+Template Type : Module / Site
 Template Note : 各種設定
 ========================================
-</mt:ignore>
+</mt:Ignore>
 
 <mt:SetVarBlock name="compress_pattern">/http:\/\/<mt:WebsiteHost />/g</mt:SetVarBlock>
 <mt:SetVarBlock name="compress_authorname">/^(\d{1,})_/</mt:SetVarBlock>
@@ -14,10 +14,13 @@ dateformat=%Y.%m.%d
 blogid_all=1,2,3
 blogid_website=1
 blogid_basename=0
+base_title=サイトのタイトル
 base_keywords=テスト,テスト,テスト,テスト,テスト,テスト
+base_description=サイトの説明が入ります。
 base_sitedomain=www.exsapmle.com
 base_ogpimageurl=http/**/ogimage.png
 regex_replace=/(http|https):\/\/.+?\//
+debug=false
 </mt:SetVars>
 <mt:SetVarBlock name="replace_sitedomain">https://<mt:Var name="base_sitedomain"></mt:SetVarBlock>
 
