@@ -1,12 +1,18 @@
 <mt:Ignore>
 ========================================
 Template Name : html_foot
-Template Type : Layout / WebSite
-Template Note : html_foot Template
+Template Type : Layout / Site
+Template Note : Html_Foot Template
 ========================================
 </mt:Ignore>
 
 <mt:Ignore>** 表示部分 **</mt:Ignore>
 <mt:Include module="script" parent="1" />
+<mt:Ignore>
+  - Debug Mode : true のときに使用
+</mt:Ignore>
+<mt:If name="debug" eq="true">
+<mt:Include module="debug" parent="1" />
+</mt:If>
 </body>
 </html>

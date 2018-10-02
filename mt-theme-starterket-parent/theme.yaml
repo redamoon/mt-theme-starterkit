@@ -1,0 +1,138 @@
+---
+author_link: https://github.com/redamoon/mt-theme-starterket
+author_name: redamoon
+class: website
+description: Moavable Type 7 案件用ベーステーマ
+thumbnail_file: 'thumb.png'
+thumbnail_file_medium: 'thumb-medium.png'
+thumbnail_file_small: 'thucmb-small.png'
+elements:
+  default_category_sets:
+    component: ~
+    data:
+      FolderGroup:
+        categories:
+          ":order":
+          - folderA
+          - folderB
+          - folderC
+          folderA:
+            description: 'FolderAのフォルダ'
+            label: 'FolderA'
+          folderB:
+            description: 'FolderBのフォルダ'
+            label: 'FolderB'
+          folderC:
+            description: 'FolderCのフォルダ'
+            label: 'FolderC'
+        name: 'FolderGroup'
+      CategoryGroup:
+        categories:
+          ":order":
+          - CategoryA
+          - CategoryB
+          - CategoryC
+          CategoryA:
+            description: 'CategoryAのカテゴリ'
+            label: 'CategoryA'
+          CategoryB:
+            description: 'CategoryBのカテゴリ'
+            label: 'CategoryB'
+          CategoryC:
+            description: 'CategoryCのカテゴリ'
+            label: 'CategoryC'
+        name: 'CategoryGroup'
+    importer: default_category_sets
+  default_content_types:
+    component: ~
+    data:
+      -
+        description: '固定ページのコンテンツタイプ'
+        fields:
+          -
+            data_label: 1
+            description: ''
+            display: force
+            initial_value: ''
+            label: 'ページタイトル'
+            max_length: 255
+            min_length: 0
+            order: 1
+            required: 1
+            type: single_line_text
+          -
+            can_add: 0
+            category_set: 'FolderGroup'
+            description: ''
+            display: force
+            label: 'フォルダ'
+            max: 1
+            min: 1
+            multiple: 0
+            order: 2
+            required: 1
+            type: categories
+          -
+            description: ''
+            display: force
+            initial_value: ''
+            input_format: 0
+            label: 'ページ本文'
+            order: 3
+            required: 1
+            type: multi_line_text
+        name: '固定ページ'
+        user_disp_option: 1
+    importer: default_content_types
+  template_set:
+    component: ~
+    data:
+      base_path: templates
+      label: 'exported_template set'
+      templates:
+        ct:
+          template_pages:
+            content_type: '固定ページ'
+            label: 'pages.html'
+            mappings:
+              contenttype:
+                archive_type: ContentType
+                category_field: 'フォルダ'
+                file_template: <mt:CategoryBasename separator="-" />/<mt:ContentID pad="1">.html
+                preferred: 1
+        index:
+          main_index:
+            label: 'index.html'
+            outfile: index.html
+            rebuild_me: '1'
+          _format_template:
+            label: '_format_template.html'
+            outfile: _format_template.html
+            rebuild_me: '1'
+            build_type: '0'
+        module:
+          template_config:
+            label: 'config'
+          template_component:
+            label: 'component'
+          template_html_head:
+            label: 'html_head'
+          template_html_foot:
+            label: 'html_foot'
+          template_script:
+            label: 'script'
+          template_style:
+            label: 'style'
+          template_footer:
+            label: 'footer'
+          template_navigation:
+            label: 'navigation'
+          template_header:
+            label: 'header'
+          template_debug:
+            label: 'debug'
+    importer: template_set
+id: mt-theme-starterket
+label: mt-theme-starterket-Parent
+name: mt-theme-starterket-parent
+version: '2.0'

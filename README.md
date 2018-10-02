@@ -1,16 +1,15 @@
 # Movable Type テンプレート構築用テーマ
 
-構築に必要なモジュールをまとめたテーマになります。
-その他のウィジェットやインデックステンプレート・アーカイブテンプレート・システムテンプレートを削除しています。
+- VERSION：Moavable Type 7
 
-構築に必要なものだけに特化したテーマ[Visual themeテーマよりStarterket theme]になります。
+初期構築のベーステーマ一式が同梱されています。<br>
+構築に必要なものだけに特化したテーマ[Starterket theme]になります。
 
-mt-theme-starterket_websiteとmt-theme-starterket_blogを[MT_HOME/themes/]へアップロードしてお使いください。
+mt-theme-starterket-parentを[MT_HOME/themes/]へアップロードしてお使いください。
 
-## [Theme] mt-theme-starterket_website
+## [Theme] mt-theme-starterket-parent
 
-ウェブサイトで使用するテーマになります。
-Webで考えられる基本のモジュールを格納されています。
+CMS設計で考えられる基本のモジュールを同梱しています。
 
 ### File Organization
 
@@ -26,12 +25,11 @@ Webで考えられる基本のモジュールを格納されています。
 
 新規テンプレート作成用のフォーマットファイル
 
-#### アーカイブテンプレート
+#### コンテンツタイプテンプレート
 
-* ウェブページ
+* pages.html
 
-ウェブページで使用するアーカイブテンプレートになります。
-
+固定ページ用のベーステンプレートになります。<br>
 ※基本ウェブページは、ウェブサイトにぶら下げることを推奨
 
 #### モジュールテンプレート
@@ -43,18 +41,38 @@ Webで考えられる基本のモジュールを格納されています。
 * header：表示側のheaderテンプレート
 * footer：表示側のfooterテンプレート
 * navigation：表示側のnavigationテンプレート
-* script：scriptを記述したテンプレート（local_scriptはページ固有で使用するためのmt:Var）
-
-## [Theme] mt-theme-starterket_blog
-
-すべてを空にしたテーマになります。
-ブログで必要なテンプレートは、案件によって変わるため空にして、0ベースで構築することが可能です。
-
-必要なモジュールをウェブサイトからインクルードで持ってくるようにしていきます。
+* script：scriptを記述したテンプレート（local_scriptはページ固有で使用）
+* style：styleを記述したテンプレート（local_styleはページ固有で使用）
+* debug：debug用のモジュール：初期値false（config内の `debug=true` で使用）
 
 ```
 <mt:Include module="モジュール名" parent="1" />
 ```
+
+## Base mt:ContentType
+
+- 固定ページ
+
+ベースのコンテンツタイプは固定ページのみをセットしてます。<br>
+設計要件に応じて削除もしくは拡張します。
+
+## Base mt:ContentField
+
+- ページタイトル
+- フォルダ
+- ページ本文
+
+固定ページで使用するベースのコンテンツフィールドになります。<br>
+設計要件に応じて削除もしくは拡張します。
+
+## Base CategorySet
+
+- FolderGroup
+- CategoryGroup
+
+ベースのカテゴリセットになります。<br>
+固定ページではFolderGroupを使用します。<br>
+設計要件に応じて削除もしくは拡張します。
 
 ## Format
 
@@ -64,7 +82,7 @@ Webで考えられる基本のモジュールを格納されています。
 <mt:Ignore>
 ========================================
 Template Name : テンプレートの名前
-Template Type : 用途（Layout・Module・Script・Web Page・Entries・Entry・Category） / （WebSite or Blog）
+Template Type : 用途（Layout・Module・Script・Web Page・Entries・Entry・Category・ContentType） / （WebSite or Blog）
 Template Note : テンプレートに対してのコメント
 ========================================
 </mt:Ignore>
@@ -143,6 +161,12 @@ componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateや
 pc_header
 sp_header
 ```
+
+## Debug Mode
+
+`config` モジュールの `debug=true` でテストモジュールで値の出力チェックが可能です。<br>
+初期値はfalseです。<br>
+入力は `debug` モジュールにテストコードを記述します。
 
 ## Basic Workflow（プロジェクトのワークフローについて）
 
