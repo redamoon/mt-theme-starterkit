@@ -82,7 +82,7 @@ CMS設計で考えられる基本のモジュールを同梱しています。
 <mt:Ignore>
 ========================================
 Template Name : テンプレートの名前
-Template Type : 用途（Layout・Module・Script・Web Page・Entries・Entry・Category・ContentType） / （WebSite or Blog）
+Template Type : 用途（Layout・Module・Script・Page・Entries・Entry・Category・ContentType） / （Parent or Child）
 Template Note : テンプレートに対してのコメント
 ========================================
 </mt:Ignore>
