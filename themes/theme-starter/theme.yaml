@@ -2,7 +2,7 @@
 author_link: https://github.com/redamoon/mt-theme-starterket
 author_name: redamoon
 class: website
-description: Moavable Type 7 案件用ベーステーマ
+description: Moavable Type Starter Theme
 thumbnail_file: 'thumb.png'
 thumbnail_file_medium: 'thumb-medium.png'
 thumbnail_file_small: 'thucmb-small.png'
@@ -87,7 +87,7 @@ elements:
   template_set:
     component: ~
     data:
-      base_path: templates
+      base_path: theme-starter
       label: 'exported_template set'
       templates:
         ct:
@@ -132,7 +132,7 @@ elements:
           template_debug:
             label: 'debug'
     importer: template_set
-id: mt-theme-starterket
-label: mt-theme-starterket-Parent
-name: mt-theme-starterket-parent
-version: '2.0'
+id: mt-theme-starter
+label: 'Movable Type Starter Theme'
+name: theme-starter
+version: '3.0'
