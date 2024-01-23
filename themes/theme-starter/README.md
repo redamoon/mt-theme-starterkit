@@ -5,9 +5,9 @@
 初期構築のベーステーマ一式が同梱されています。<br>
 構築に必要なものだけに特化したテーマ[Starterket theme]になります。
 
-mt-theme-starterket-parentを[MT_HOME/themes/]へアップロードしてお使いください。
+theme-starterketを[MT_HOME/themes/]へアップロードしてお使いください。
 
-## [Theme] mt-theme-starterket-parent
+## [Theme] theme-starterket
 
 CMS設計で考えられる基本のモジュールを同梱しています。
 
