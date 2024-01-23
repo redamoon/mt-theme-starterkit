@@ -5,8 +5,12 @@ import inquirer from 'inquirer';
 import fs from 'fs';
 import fse from 'fs-extra';
 import path from 'path';
+import { fileURLToPath } from 'url';
 
-const themesDirectory = path.join(__dirname, '.', 'themes');
+// 現在のモジュールのディレクトリパスを取得
+const __dirname = path.dirname(fileURLToPath(import.meta.url));
+
+const themesDirectory = path.join(__dirname, 'themes');
 
 const getThemes = () => {
   return fs.readdirSync(themesDirectory).filter(file => {
