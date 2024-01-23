@@ -6,7 +6,7 @@ import fs from 'fs';
 import fse from 'fs-extra';
 import path from 'path';
 
-const themesDirectory = path.join('./', 'themes');
+const themesDirectory = path.join(__dirname, '.', 'themes');
 
 const getThemes = () => {
   return fs.readdirSync(themesDirectory).filter(file => {
