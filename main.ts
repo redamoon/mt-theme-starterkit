@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 // 現在のモジュールのディレクトリパスを取得
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
-const themesDirectory = path.join(__dirname, 'themes');
+const themesDirectory = path.join(__dirname, '..', 'themes');
 
 const getThemes = () => {
   return fs.readdirSync(themesDirectory).filter(file => {
