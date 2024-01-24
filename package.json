@@ -1,11 +1,11 @@
 {
-  "name": "mt-theme-starterket",
+  "name": "mt-theme-starterkit",
   "version": "1.0.3",
   "description": "CLI to generate Movable Type base themes",
   "main": "dist/main.js",
   "type": "module",
   "bin": {
-    "mt-theme-starterket": "dist/main.js"
+    "mt-theme-starterkit": "dist/main.js"
   },
   "scripts": {
     "start": "ts-node src/main.ts",
@@ -14,7 +14,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/redamoon/mt-theme-starterket.git"
+    "url": "git+https://github.com/redamoon/mt-theme-starterkit.git"
   },
   "keywords": [
     "node",
@@ -26,9 +26,9 @@
   "author": "redamoon",
   "license": "MIT",
   "bugs": {
-    "url": "https://github.com/redamoon/mt-theme-starterket/issues"
+    "url": "https://github.com/redamoon/mt-theme-starterkit/issues"
   },
-  "homepage": "https://github.com/redamoon/mt-theme-starterket#readme",
+  "homepage": "https://github.com/redamoon/mt-theme-starterkit#readme",
   "volta": {
     "node": "20.10.0",
     "npm": "10.2.3"
