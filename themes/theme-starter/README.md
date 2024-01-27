@@ -1,13 +1,13 @@
 # Movable Type テンプレート構築用テーマ
 
-- VERSION：Moavable Type 7
+- VERSION：Movable Type 7
 
 初期構築のベーステーマ一式が同梱されています。<br>
 構築に必要なものだけに特化したテーマ[Starterket theme]になります。
 
-theme-starterketを[MT_HOME/themes/]へアップロードしてお使いください。
+theme-starter を[MT_HOME/themes/]へアップロードしてお使いください。
 
-## [Theme] theme-starterket
+## [Theme] theme-starter
 
 CMS設計で考えられる基本のモジュールを同梱しています。
 
@@ -45,7 +45,7 @@ CMS設計で考えられる基本のモジュールを同梱しています。
 * style：styleを記述したテンプレート（local_styleはページ固有で使用）
 * debug：debug用のモジュール：初期値false（config内の `debug=true` で使用）
 
-```
+```html
 <mt:Include module="モジュール名" parent="1" />
 ```
 
@@ -78,7 +78,7 @@ CMS設計で考えられる基本のモジュールを同梱しています。
 
 追加テンプレート用のフォーマットになります。
 
-```
+```html
 <mt:Ignore>
 ========================================
 Template Name : テンプレートの名前
@@ -110,12 +110,28 @@ Template Note : テンプレートに対してのコメント
 
 ### componentの使い方
 
+Component.mtmmlにボタンを定義します。
+
+```html
+************************
+フォーマット
+************************
+## 定義（Set）
+<mt:SetVarTemplate name="_base_button" key="button" note="ボタン">
+<div class="button">
+  <a class="button__link" href="<mt:Var name='_button_link' />">
+    <mt:Var name="_button_name" />
+  </a>
+</div>
+</mt:SetVarTemplate>
+```
+
 componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateやSetVarBlockを用いてテンプレート化して自由に出力先でmt:Varできるような形を想定したテンプレートになります。
 
 #### 例：ボタン
 
-```
-<a class="クラス名が入ります。" href="URLが入ります。">ボタン名</a>
+```html
+<a class="クラス名が入ります。" href="/path">ボタン名</a>
 ```
 
 このようなボタンの場合、SetVarTemplateで入れる引数は3つ想定されます。
@@ -126,7 +142,7 @@ componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateや
 
 ##### MTML
 
-```
+```html
 <mt:Ignore>** Button Component：Set **</mt:Ignore>
 <mt:SetVarTemplate name="_base_button" key="button" note="ボタン">
 <a class="<mt:Var name="_button_class" />" href="<mt:Var name="_button_link" />">
@@ -135,14 +151,14 @@ componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateや
 </mt:SetVarTemplate>
 ```
 
-```
+```html
 <mt:Ignore>** Button Component：Build **</mt:Ignore>
 <mt:Var name="_base_button" key="button" _button_class="button" _button_link="/path/" _button_name="ベースボタン" note="_base_buttonを実行" />
 ```
 
 ##### HTML出力結果
 
-```
+```html
 <a class="button" href="/path/">ベースボタン</a>
 ```
 
@@ -156,7 +172,7 @@ componentは汎用的なもの（ボタンや見出し等）をSetVarTemplateや
 
 * 接頭辞をつけること
 
-```
+```text
 例：
 pc_header
 sp_header
