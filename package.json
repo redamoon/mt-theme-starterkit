@@ -1,6 +1,6 @@
 {
   "name": "mt-theme-starterkit",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "CLI to generate Movable Type base themes",
   "main": "dist/main.js",
   "type": "module",
